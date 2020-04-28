@@ -23,7 +23,7 @@
     </parent>
     <artifactId>ui</artifactId>
     <groupId>org.codice.ddf</groupId>
-    <name>DDF :: UI</name>
+    <name>DDF :: UI :: Admin</name>
     <packaging>bundle</packaging>
     <properties>
         <buildEnv>production</buildEnv>
