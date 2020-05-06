@@ -78,7 +78,7 @@ pipeline {
                     sh 'mvn deploy -B -DskipStatic=true -DskipTests=true -DretryFailedDeploymentCount=10 $DISABLE_DOWNLOAD_PROGRESS_OPTS'
                 }
             }
-        }å
+        }
     }
     post {
         always{
