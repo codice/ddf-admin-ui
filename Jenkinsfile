@@ -30,7 +30,7 @@ pipeline {
         LINUX_MVN_RANDOM = '-Djava.security.egd=file:/dev/./urandom'
         COVERAGE_EXCLUSIONS = '**/test/**/*,**/itests/**/*,**/*Test*,**/sdk/**/*,**/*.js,**/node_modules/**/*,**/jaxb/**/*,**/wsdl/**/*,**/nces/sws/**/*,**/*.adoc,**/*.txt,**/*.xml'
         GITHUB_USERNAME = 'codice'
-        GITHUB_TOKEN = credentials('github-api-cred')
+        GITHUB_TOKEN = credentials('cxddfuibot')
         GITHUB_REPONAME = 'ddf-admin-ui'
     }
     stages {
