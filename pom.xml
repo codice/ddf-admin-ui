@@ -22,7 +22,7 @@
     <artifactId>ui-admin</artifactId>
     <packaging>pom</packaging>
     <groupId>org.codice.ddf</groupId>
-    <version>2.25.1-SNAPSHOT</version>
+    <version>2.25.0-SNAPSHOT</version>
     <name>DDF :: Admin-UI :: Parent</name>
     <description>Distributed Data Framework (DDF) Admin UI</description>
     <organization>
