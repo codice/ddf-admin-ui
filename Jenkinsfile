@@ -72,7 +72,15 @@ pipeline {
     }
     post {
         always{
-            postCommentIfPR("Build ${currentBuild.currentResult} See the job results in [legacy Jenkins UI](${BUILD_URL}) or in [Blue Ocean UI](${BUILD_URL}display/redirect).", "${GITHUB_USERNAME}", "${GITHUB_REPONAME}", "${GITHUB_TOKEN}")
+            script {
+                postCommentIfPR("Build ${currentBuild.currentResult} See the job results in [legacy Jenkins UI](${BUILD_URL}) or in [Blue Ocean UI](${BUILD_URL}display/redirect).", "${GITHUB_USERNAME}", "${GITHUB_REPONAME}", "${GITHUB_TOKEN}")
+                if (currentBuild.currentResult == 'FAILURE') {
+                    def logUrl = env.BUILD_URL + 'consoleText'
+                    def response = sh(returnStdout: true, script: "curl -L -k ${logUrl}")
+                    def failureMessage = getFailureMessage(response)
+                    postCommentIfPR("${failureMessage}", "${GITHUB_USERNAME}", "${GITHUB_REPONAME}", "${GITHUB_TOKEN}")
+                }
+            }
         }
         success {
             slackSend color: 'good', message: "SUCCESS: ${JOB_NAME} ${BUILD_NUMBER}"
