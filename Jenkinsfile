@@ -15,7 +15,6 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr:'25'))
         disableConcurrentBuilds()
         timestamps()
-        skipDefaultCheckout()
     }
     triggers {
         /*
