@@ -28,7 +28,6 @@ pipeline {
         LARGE_MVN_OPTS = '-Xmx4G -Xms1G -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC '
         DISABLE_DOWNLOAD_PROGRESS_OPTS = '-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn '
         LINUX_MVN_RANDOM = '-Djava.security.egd=file:/dev/./urandom'
-        COVERAGE_EXCLUSIONS = '**/test/**/*,**/itests/**/*,**/*Test*,**/sdk/**/*,**/*.js,**/node_modules/**/*,**/jaxb/**/*,**/wsdl/**/*,**/nces/sws/**/*,**/*.adoc,**/*.txt,**/*.xml'
         GITHUB_USERNAME = 'codice'
         GITHUB_TOKEN = credentials('cxddfuibot')
         GITHUB_REPONAME = 'ddf-admin-ui'
@@ -39,15 +38,6 @@ pipeline {
                 dockerd {}
                 slackSend color: 'good', message: "STARTED: ${JOB_NAME} ${BUILD_NUMBER} ${BUILD_URL}"
                 postCommentIfPR("Internal build has been started, your results will be available at build completion.", "${GITHUB_USERNAME}", "${GITHUB_REPONAME}", "${GITHUB_TOKEN}")
-            }
-        }
-
-        // Checkout the repository
-        stage('Checkout repo') {
-            steps {
-                retry(3) {
-                    checkout([$class: 'GitSCM', branches: [[name: "refs/heads/${BRANCH_NAME}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'WipeWorkspace'], [$class: 'LocalBranch', localBranch: "${BRANCH_NAME}"], [$class: 'CloneOption', timeout: 30, shallow: true]], submoduleCfg: [], userRemoteConfigs: scm.userRemoteConfigs ])
-                }
             }
         }
         stage('Full Build') {
