@@ -145,7 +145,8 @@ define([
         'click button': 'logout',
       },
       logout: function() {
-        window.location.href = '../logout?service=' + window.location.href
+        window.location.href =
+          '../logout?service=' + encodeURIComponent(window.location.href)
       },
     }))()
   )

@@ -123,7 +123,9 @@ define(['backbone', 'jquery', 'underscore', 'properties'], function(
       $(document).off('keydown.sessionTimeout mousedown.sessionTimeout')
     },
     logout: function() {
-      window.location.replace(invalidateUrl + window.location.href)
+      window.location.replace(
+        invalidateUrl + encodeURIComponent(window.location.href)
+      )
     },
     renew: function() {
       this.hidePrompt()
