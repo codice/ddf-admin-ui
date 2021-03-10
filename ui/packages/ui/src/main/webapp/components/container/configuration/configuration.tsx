@@ -19,7 +19,7 @@ import ConfigurationElement, {
 } from '../../presentation/configuration'
 const wreqr = require('js/wreqr.js')
 const configUrl =
-  './jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0'
+  '../admin/jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0'
 const $ = require('jquery')
 const destroy = (id: string) => {
   var deleteUrl = [configUrl, 'delete', id].join('/')

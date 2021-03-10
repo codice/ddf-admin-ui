@@ -21,7 +21,7 @@ define(['backbone', 'underscore'], function(Backbone, _) {
   AppConfigPlugin.Collection = Backbone.Collection.extend({
     model: AppConfigPlugin.Model,
     url:
-      './jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/getPluginsForApplication(java.lang.String)/',
+      '../../admin/jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/getPluginsForApplication(java.lang.String)/',
     fetchByAppName: function(appName, options) {
       var collection = this
 

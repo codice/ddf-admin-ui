@@ -112,7 +112,7 @@ define(['backbone.marionette', 'underscore', 'backbone', 'jquery'], function(
         type: 'POST',
         contentType: 'application/json',
         data: jdata,
-        url: './jolokia/exec/' + data.mbean + '/' + data.operation,
+        url: '../../admin/jolokia/exec/' + data.mbean + '/' + data.operation,
       }).done(function(result) {
         if (!model.get('devMode')) {
           model.set('certErrors', JSON.parse(result).value)

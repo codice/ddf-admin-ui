@@ -22,7 +22,7 @@ define([
   var AlertsView = {}
 
   var dismissUrl =
-    './jolokia/exec/org.codice.ddf.ui.admin.api:type=AdminAlertMBean/dismissAlert'
+    '../../admin/jolokia/exec/org.codice.ddf.ui.admin.api:type=AdminAlertMBean/dismissAlert'
 
   AlertsView.View = Marionette.ItemView.extend({
     template: alertsTemplate,

@@ -74,7 +74,7 @@ define([
       $.ajax({
         type: 'GET',
         url:
-          './jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/installFeature(java.lang.String)/' +
+          '../../admin/jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/installFeature(java.lang.String)/' +
           profile,
         dataType: 'JSON',
         success: function(data) {

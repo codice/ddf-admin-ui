@@ -28,7 +28,7 @@ define(['backbone.marionette', './iframe.hbs', 'js/CustomElements'], function(
         </iframe>
       )
       switch (url) {
-        case './logviewer/index.html':
+        case `/admin/logviewer/index.html`:
           Component = AdminLogViewer
           break
       }

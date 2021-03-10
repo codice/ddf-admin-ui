@@ -54,7 +54,7 @@ define([
 
   Service.Configuration = Backbone.AssociatedModel.extend({
     configUrl:
-      './jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0',
+      '../../admin/jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0',
 
     defaults: function() {
       return {
@@ -281,7 +281,7 @@ define([
 
   Service.Model = Backbone.AssociatedModel.extend({
     configUrl:
-      './jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0',
+      '../../admin/jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0',
 
     defaults: function() {
       return {
@@ -366,7 +366,7 @@ define([
         this.url = options.url
       } else {
         this.url =
-          './jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0/listServices'
+          '../../admin/jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0/listServices'
       }
     },
   })

@@ -47,11 +47,11 @@ define(['backbone', 'underscore', 'jquery', 'js/wreqr'], function(
 
   Installer.Model = Backbone.Model.extend({
     installUrl:
-      './jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/installFeature(java.lang.String)/',
+      '../../admin/jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/installFeature(java.lang.String)/',
     uninstallUrl:
-      './jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/uninstallFeature(java.lang.String)/',
+      '../../admin/jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/uninstallFeature(java.lang.String)/',
     restartUrl:
-      './jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/restart()/',
+      '../../admin/jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/restart()/',
     defaults: function() {
       return {
         hasNext: true,

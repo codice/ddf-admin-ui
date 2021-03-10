@@ -149,7 +149,7 @@ define(['backbone', 'jquery', 'underscore'], function(Backbone, $, _) {
   Applications.TreeNodeCollection = Backbone.Collection.extend({
     model: Applications.TreeNode,
     url:
-      './jolokia/read/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/Applications/',
+      '../../admin/jolokia/read/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/Applications/',
 
     comparator: function(model) {
       return model.get('displayName')
@@ -168,7 +168,7 @@ define(['backbone', 'jquery', 'underscore'], function(Backbone, $, _) {
         applicationsResponseCache = $.ajax({
           type: 'GET',
           url:
-            './jolokia/read/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/Applications/',
+            '../../admin/jolokia/read/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/Applications/',
           dataType: 'JSON',
         }).then(function(appsResp) {
           return appsResp.value

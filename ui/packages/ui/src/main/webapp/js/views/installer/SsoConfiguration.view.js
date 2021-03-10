@@ -163,7 +163,7 @@ define([
         contentType: 'application/json',
         data: JSON.stringify(data),
         url:
-          './jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0',
+          '../../admin/jolokia/exec/org.codice.ddf.ui.admin.api.ConfigurationAdmin:service=ui,version=2.3.0',
         success: function() {
           wreqr.vent.trigger('ssoConfigPersisted')
         },

@@ -13,7 +13,7 @@
  *
  **/
 
-var invalidateUrl = '../services/internal/session/invalidate?service='
+var invalidateUrl = '../../services/internal/session/invalidate?service='
 
 var idleNoticeDuration = 60000
 // Length of inactivity that will trigger user timeout (15 minutes in ms by default)

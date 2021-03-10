@@ -26,7 +26,7 @@ define(['backbone.marionette', 'js/CustomElements'], function(
         <Services
           url={
             this.model
-              ? './jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/getServices/' +
+              ? '../../admin/jolokia/exec/org.codice.ddf.admin.application.service.ApplicationService:service=application-service/getServices/' +
                 this.model.get('appId')
               : undefined
           }

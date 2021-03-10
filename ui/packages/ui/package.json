@@ -63,5 +63,5 @@
     "src/main/resources"
   ],
   "main": "src/main/webapp/main.js",
-  "context-path": "/admin"
+  "context-path": "/admin/old"
 }

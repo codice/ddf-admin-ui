@@ -26,7 +26,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
   AlertsModel.BackendAlerts = Backbone.Collection.extend({
     model: AlertsModel.Alert,
     url:
-      './jolokia/read/org.codice.ddf.ui.admin.api:type=AdminAlertMBean/Alerts',
+      '../../admin/jolokia/read/org.codice.ddf.ui.admin.api:type=AdminAlertMBean/Alerts',
     parse: function(response) {
       return response.value
     },
@@ -54,7 +54,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
             },
           ]
           json.title =
-            'Your session has expired. Please <a href="/login/index.html?prevurl=/admin/">log in</a> again.'
+            'Your session has expired. Please <a href="/login/index.html?prevurl=/admin/old">log in</a> again.'
         }
         return json
       } else {

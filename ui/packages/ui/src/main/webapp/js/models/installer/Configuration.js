@@ -51,9 +51,9 @@ define(['backbone', 'jquery', 'backboneassociations'], function(Backbone, $) {
   Configuration.SystemProperties = Backbone.Collection.extend({
     model: Configuration.SystemProperty,
     url:
-      './jolokia/exec/org.codice.ddf.ui.admin.api:type=SystemPropertiesAdminMBean/readSystemProperties',
+      '../../admin/jolokia/exec/org.codice.ddf.ui.admin.api:type=SystemPropertiesAdminMBean/readSystemProperties',
     saveUrl:
-      './jolokia/exec/org.codice.ddf.ui.admin.api:type=SystemPropertiesAdminMBean/writeSystemProperties',
+      '../../admin/jolokia/exec/org.codice.ddf.ui.admin.api:type=SystemPropertiesAdminMBean/writeSystemProperties',
     parse: function(response) {
       // Return the value which will be the list of system property objects
       return response.value

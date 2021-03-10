@@ -119,11 +119,16 @@ define([
                 this.model.get('iframeLocation') &&
                 this.model.get('iframeLocation') !== ''
               ) {
-                this.$el.html(
-                  '<iframe src="' +
-                    this.model.get('iframeLocation') +
-                    '"></iframe>'
-                )
+                // only some iframes are brought in as relative
+                const url = this.model.get('iframeLocation')
+                const isRelativeUrl = url && url.startsWith('./')
+                let fixedUrl = ''
+                if (url && isRelativeUrl) {
+                  fixedUrl = `/admin${url.substring(1)}`
+                } else {
+                  fixedUrl = url ? url : ''
+                }
+                this.$el.html('<iframe src="' + fixedUrl + '"></iframe>')
               } else {
                 if (Application.App[this.model.get('name')]) {
                   //the require([]) function uses setTimeout internally to make this call asynchronously

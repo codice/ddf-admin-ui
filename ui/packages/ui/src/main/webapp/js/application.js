@@ -112,7 +112,7 @@ define([
           <div className="panel-heading">
             <h4 className="panel-title clearfix">
               <i className="fa fa-bullhorn" />
-              <a href="beta">Click here to try the new Admin UI</a>
+              <a href="../../admin">Click here to go to the new Admin UI</a>
               <button
                 type="button"
                 className="btn btn-link dismiss"
@@ -146,7 +146,7 @@ define([
       },
       logout: function() {
         window.location.href =
-          '../logout?service=' + encodeURIComponent(window.location.href)
+          '../../logout?service=' + encodeURIComponent(window.location.href)
       },
     }))()
   )

@@ -75,9 +75,18 @@ define([
         newView = new newView({ model: view.applicationModel })
         view.tabContentInner.show(newView)
       } else if (iframeLocation) {
+        // only some iframes are brought in as relative
+        const url = iframeLocation
+        const isRelativeUrl = url && url.startsWith('./')
+        let fixedUrl = ''
+        if (url && isRelativeUrl) {
+          fixedUrl = `/admin${url.substring(1)}`
+        } else {
+          fixedUrl = url ? url : ''
+        }
         view.tabContentInner.show(
           new IFrameView({
-            model: new Backbone.Model({ url: iframeLocation }),
+            model: new Backbone.Model({ url: fixedUrl }),
           })
         )
       }

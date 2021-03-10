@@ -20,7 +20,7 @@ define(['backbone'], function(Backbone) {
     defaults: {
       fetched: false,
     },
-    url: './jolokia/read/java.lang:type=OperatingSystem/',
+    url: '../../admin/jolokia/read/java.lang:type=OperatingSystem/',
     parse: function(resp) {
       resp.value.fetched = true
       return resp.value

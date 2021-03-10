@@ -14,7 +14,7 @@
  **/
 
 define(['backbone', 'jquery'], function(Backbone, $) {
-  var sessionExpiryUrl = '../services/internal/session/expiry'
+  var sessionExpiryUrl = '../../services/internal/session/expiry'
 
   var sessionAutoRenewModel = new (Backbone.Model.extend({
     defaults: {
