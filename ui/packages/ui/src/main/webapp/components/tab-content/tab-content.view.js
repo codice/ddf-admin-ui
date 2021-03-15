@@ -14,6 +14,7 @@
  **/
 /* global define */
 import { iframeResizer } from 'iframe-resizer'
+import { getFixedUrl } from '../../js/util/IframeUtil'
 define([
   'require',
   'backbone.marionette',
@@ -75,18 +76,10 @@ define([
         newView = new newView({ model: view.applicationModel })
         view.tabContentInner.show(newView)
       } else if (iframeLocation) {
-        // only some iframes are brought in as relative
-        const url = iframeLocation
-        const isRelativeUrl = url && url.startsWith('./')
-        let fixedUrl = ''
-        if (url && isRelativeUrl) {
-          fixedUrl = `/admin${url.substring(1)}`
-        } else {
-          fixedUrl = url ? url : ''
-        }
+        const url = getFixedUrl(iframeLocation)
         view.tabContentInner.show(
           new IFrameView({
-            model: new Backbone.Model({ url: fixedUrl }),
+            model: new Backbone.Model({ url }),
           })
         )
       }
