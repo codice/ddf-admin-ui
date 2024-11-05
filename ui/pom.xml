@@ -12,7 +12,9 @@
  *
  **/
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.codice.ddf</groupId>
@@ -40,7 +42,6 @@
         <require-css.version>0.1.10</require-css.version>
         <underscore.version>1.8.3</underscore.version>
         <yarn.version>v1.17.3</yarn.version>
-
         <!-- maven plugin versions -->
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
         <!-- Must MANUALLY update this if the codice-maven project's version changes -->
@@ -433,6 +434,52 @@
                                 <artifact>
                                     <file>packages/ui/target/admin-ui.jar</file>
                                     <type>jar</type>
+                                    <classifier>admin-ui</classifier>
+                                </artifact>
+                                <!-- Manually added tars -->
+                                <artifact>
+                                    <file>packages/admin-federation-ui/target/federation-admin-module.tgz</file>
+                                    <type>tgz</type>
+                                    <classifier>federation-admin-module</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>packages/admin-metrics-ui/target/metrics-module.tgz</file>
+                                    <type>tgz</type>
+                                    <classifier>metrics-module</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>packages/admin-security-certificate-ui/target/security-certificate-adminmodule.tgz</file>
+                                    <type>tgz</type>
+                                    <classifier>security-certificate-adminmodule</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>packages/beta-admin-ui/target/beta-admin-ui.tgz</file>
+                                    <type>tgz</type>
+                                    <classifier>beta-admin-ui</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>packages/catalog-admin-module-layout/target/default-layout.tgz</file>
+                                    <type>tgz</type>
+                                    <classifier>default-layout</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>packages/catalog-admin-module-maplayers/target/map-layers.tgz</file>
+                                    <type>tgz</type>
+                                    <classifier>map-layers</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>packages/catalog-admin-module-sources/target/sources-module.tgz</file>
+                                    <type>tgz</type>
+                                    <classifier>sources-module</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>packages/security-logout/target/security-logout.tgz</file>
+                                    <type>tgz</type>
+                                    <classifier>security-logout</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>packages/ui/target/admin-ui.tgz</file>
+                                    <type>tgz</type>
                                     <classifier>admin-ui</classifier>
                                 </artifact>
                             </artifacts>

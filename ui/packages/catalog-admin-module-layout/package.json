@@ -27,6 +27,7 @@
     "posttest": "istanbul check-coverage",
     "coverage:report": "istanbul report html && opn ./target/coverage/index.html",
     "build": "ace bundle && ace package",
+    "postbuild": "npm pack && mv default-layout-1.0.0.tgz target/default-layout.tgz",
     "clean": "ace clean",
     "m2": "ace clean && ace bundle && ace package && ace install"
   },

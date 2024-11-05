@@ -39,6 +39,7 @@
   "scripts": {
     "start": "grunt",
     "build": "grunt build && ace package",
+    "postbuild": "npm pack && mv metrics-module-2.5.0.tgz target/metrics-module.tgz",
     "clean": "ace clean"
   },
   "files": [
