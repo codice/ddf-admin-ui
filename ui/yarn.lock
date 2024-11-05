@@ -1958,9 +1958,9 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@connexta/ace@*", "@connexta/ace@git://github.com/connexta/ace.git#b8a981b8608c8642b23c87fa3aebcf7fb040e073":
+"@connexta/ace@*", "@connexta/ace@git+https://github.com/connexta/ace.git#b8a981b8608c8642b23c87fa3aebcf7fb040e073":
   version "1.0.0"
-  resolved "git://github.com/connexta/ace.git#b8a981b8608c8642b23c87fa3aebcf7fb040e073"
+  resolved "git+https://github.com/connexta/ace.git#b8a981b8608c8642b23c87fa3aebcf7fb040e073"
   dependencies:
     "@babel/core" "^7.0.0"
     "@storybook/addon-actions" "5.2.8"
@@ -2068,13 +2068,13 @@
     styled-components "4.3.2"
     ts-loader "6.0.4"
 
-"@connexta/eslint-config-connexta@git://github.com/connexta/eslint-config-connexta.git#105393617ec845b009b682882c95313ba50144b1":
+"@connexta/eslint-config-connexta@git+https://github.com/connexta/eslint-config-connexta.git#105393617ec845b009b682882c95313ba50144b1":
   version "1.0.0"
-  resolved "git://github.com/connexta/eslint-config-connexta.git#105393617ec845b009b682882c95313ba50144b1"
+  resolved "git+https://github.com/connexta/eslint-config-connexta.git#105393617ec845b009b682882c95313ba50144b1"
 
-"@connexta/eslint-plugin-connexta@git://github.com/connexta/eslint-plugin-connexta.git#9b366b8924c3dbe03aedcfe6d25c8eb3567cc061":
+"@connexta/eslint-plugin-connexta@git+https://github.com/connexta/eslint-plugin-connexta.git#9b366b8924c3dbe03aedcfe6d25c8eb3567cc061":
   version "0.0.0"
-  resolved "git://github.com/connexta/eslint-plugin-connexta.git#9b366b8924c3dbe03aedcfe6d25c8eb3567cc061"
+  resolved "git+https://github.com/connexta/eslint-plugin-connexta.git#9b366b8924c3dbe03aedcfe6d25c8eb3567cc061"
   dependencies:
     requireindex "1.1.0"
 
@@ -2084,7 +2084,7 @@
   integrity sha512-GFVN6TXR9CSbMJoitKNpWMiUTjsrpZ1AQ5rmbd51MOXkT4MmPnO41qahRtoRIRdKWI+xR9+htZtQCj5nFlOfTg==
   dependencies:
     "@connexta/atlas" "0.0.47"
-    "@connexta/logviewer" "git://github.com/connexta/logviewer.git#17e7f603fbe5ba5d8edcd64c07787d065617deaa"
+    "@connexta/logviewer" "git+https://github.com/connexta/logviewer.git#17e7f603fbe5ba5d8edcd64c07787d065617deaa"
     "@material-ui/core" "4.4.1"
     "@material-ui/icons" "4.4.1"
     "@material-ui/lab" "4.0.0-alpha.26"
@@ -2104,9 +2104,9 @@
     styled-components "4.3.2"
     yup "0.27.0"
 
-"@connexta/logviewer@git://github.com/connexta/logviewer.git#17e7f603fbe5ba5d8edcd64c07787d065617deaa":
+"@connexta/logviewer@git+https://github.com/connexta/logviewer.git#17e7f603fbe5ba5d8edcd64c07787d065617deaa":
   version "0.1.0"
-  resolved "git://github.com/connexta/logviewer.git#17e7f603fbe5ba5d8edcd64c07787d065617deaa"
+  resolved "git+https://github.com/connexta/logviewer.git#17e7f603fbe5ba5d8edcd64c07787d065617deaa"
   dependencies:
     es6-promise "3.2.1"
     event-stream "3.3.2"
