@@ -31,6 +31,7 @@
   "scripts": {
     "start": "grunt",
     "build": "grunt build && ace package",
+    "postbuild": "npm pack && mv security-logout-2.5.0.tgz target/security-logout.tgz",
     "clean": "ace clean"
   },
   "files": [

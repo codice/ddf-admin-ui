@@ -46,6 +46,7 @@
   "scripts": {
     "start": "grunt",
     "build": "grunt build && ace package",
+    "postbuild": "npm pack && mv security-certificate-adminmodule-0.0.1.tgz target/security-certificate-adminmodule.tgz",
     "clean": "ace clean"
   },
   "files": [

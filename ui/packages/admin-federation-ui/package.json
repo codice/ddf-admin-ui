@@ -25,8 +25,8 @@
   },
   "scripts": {
     "start": "ace start",
-    "build": "ace bundle",
-    "postbuild": "ace package"
+    "build": "ace bundle && ace package",
+    "postbuild": "npm pack && mv federation-admin-module-0.1.0.tgz target/federation-admin-module.tgz"
   },
   "files": [
     "target/webapp"

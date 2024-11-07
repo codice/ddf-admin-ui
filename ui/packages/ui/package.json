@@ -53,8 +53,8 @@
   "scripts": {
     "prestart": "ace disable-idp",
     "start": "ace start",
-    "build": "ace bundle",
-    "postbuild": "ace package",
+    "build": "ace bundle && ace package",
+    "postbuild": "npm pack && mv admin-ui-0.0.1.tgz target/admin-ui.tgz",
     "m2": "yarn install:m2"
   },
   "files": [
