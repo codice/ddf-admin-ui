@@ -35,7 +35,7 @@
     "jquery-ui": "1.12.1",
     "js-cookie": "2.2.0",
     "lodash": "4.17.15",
-    "logviewer-ui": "*",
+    "@connexta/logviewer": "git+https://github.com/alexabird/logviewer.git#bd9c142a447dc67411262b1d2d19f3629b4154c0",
     "perfect-scrollbar": "1.4.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
